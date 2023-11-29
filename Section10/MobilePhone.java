@@ -63,47 +63,10 @@ public class MobilePhone {
         if (myContacts.isEmpty()) {
             System.out.println("");
         } else {
-            System.out.println("Section10.MobilePhone.Contact List:");
+            System.out.println("Contact List:");
             for (int i = 0; i < myContacts.size(); i++) {
                 System.out.println((i + 1) + ". " + myContacts.get(i).getName() + " -> " + myContacts.get(i).getPhoneNumber());
             }
         }
-    }
-
-    public static class Contact {
-        private String name;
-        private String phoneNumber;
-
-        public Contact(String name, String phoneNumber) {
-            this.name = name;
-            this.phoneNumber = phoneNumber;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public String getPhoneNumber() {
-            return phoneNumber;
-        }
-
-        public static Contact createContact(String name, String phone) {
-            return new Contact(name, phone);
-        }
-
-    //    @Override
-    //    public boolean equals(Object obj) {
-    //        if (this == obj) { // self check
-    //            return true;
-    //        }
-    //        if (obj == null) { // null check
-    //            return false;
-    //        }
-    //        if (getClass() != obj.getClass()) { // class check
-    //            return false;
-    //        }
-    //        Section10.MobilePhone.Contact c = (Section10.MobilePhone.Contact) obj;
-    //        return this.name.equals(c.getName());
-    //    }
     }
 }
