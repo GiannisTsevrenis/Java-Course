@@ -1,41 +1,33 @@
+package Section7;
 public class Wall {
-    private double height;
     private double width;
+    private double height;
 
     public Wall() {
-        this(0, 0);
     }
 
     public Wall(double width, double height) {
-        setHeight(height);
-        setWidth(width);
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        if (height < 0) {
-            this.height = 0;
-        } else {
-            this.height = height;
-        }
+        this.width = (width < 0) ? 0 : width;
+        this.height = (height < 0) ? 0 : height;
     }
 
     public double getWidth() {
         return width;
     }
 
+    public double getHeight() {
+        return height;
+    }
+
     public void setWidth(double width) {
-        if (width < 0) {
-            this.width = 0;
-        } else {
-            this.width = width;
-        }
+        this.width = (width < 0) ? 0 : width;
+    }
+
+    public void setHeight(double height) {
+        this.height = (height < 0) ? 0 : height;
     }
 
     public double getArea() {
-        return this.width * this.height;
+        return width * height;
     }
 }
