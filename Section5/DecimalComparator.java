@@ -1,7 +1,6 @@
 package Section5;
 public class DecimalComparator {
-    public static boolean areEqualByThreeDecimalPlaces(double x, double y){
-        return String.valueOf(x).substring(0,5).equals(String.valueOf(y).substring(0,5));
-
+    public static boolean areEqualByThreeDecimalPlaces(double x, double y) {
+        return (int) (x * 1000) == (int) (y * 1000);
     }
 }
