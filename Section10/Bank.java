@@ -57,7 +57,7 @@ public class Bank {
                 System.out.println("Transactions");
                 int cc = 1;
                 for (Double y : i.getTransactions()) {
-                    System.out.println("[" + cc + "]  Amount " + y);
+                    System.out.println("[" + cc + "] Amount " + y);
                     cc += 1;
                 }
             }
